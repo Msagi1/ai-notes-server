@@ -47,4 +47,5 @@ app.post("/ai", async (req, res) => {
   }
 });
 
-app.listen(8787, () => console.log("AI server on http://localhost:8787/ai"));
+const port = process.env.PORT || 8787;
+app.listen(port, () => console.log(`AI server running on port ${port}`));
